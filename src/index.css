@@ -1,0 +1,70 @@
+@import "tailwindcss";
+/* Define custom color classes */
+@layer utilities {
+  .bg-darkest {
+    background-color: #343a40;
+  }
+  .text-light {
+    color: #f1f3f5;
+  }
+  .text-medium {
+    color: #ced4da;
+  }
+  .bg-dark {
+    background-color: #495057;
+  }
+  .bg-theme {
+    background-color: #1098ad;
+  }
+  .border-theme {
+    border-color: #1098ad;
+  }
+  .bg-accent {
+    background-color: #ffa94d;
+  }
+  .border-accent {
+    border-color: #ffa94d;
+  }
+  .hover\:bg-darkest:hover {
+    background-color: #343a40;
+  }
+  .hover\:border-dark:hover {
+    border-color: #495057;
+  }
+  .focus\:ring-accent\/50:focus {
+    --tw-ring-color: rgba(255, 169, 77, 0.5);
+  }
+  .font-codystar {
+    font-family: "Codystar", cursive;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
