@@ -84,9 +84,9 @@ export default function QuizProvider({ children }) {
 
   async function getQuestions() {
     try {
-      const res = await fetch("http://localhost:8000/questions");
+      const res = await fetch("/questions.json");
       const data = await res.json();
-      dispatch({ type: "dataRecieved", payload: data });
+      dispatch({ type: "dataRecieved", payload: data.questions });
     } catch (error) {
       dispatch({ type: "dataFailed" });
     }
